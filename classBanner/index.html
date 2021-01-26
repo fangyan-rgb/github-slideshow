@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        user-select:none;
+    }
+
+    #banner {
+        width: 500px;
+        height: 300px;
+        border: 5px solid black;
+        margin: 50px auto;
+        overflow: hidden;
+        position: relative;
+    }
+
+    #banner ul {
+        width: 2500px;
+        display: flex;
+        position: absolute;
+    }
+
+    #banner ul li {
+        width: 500px;
+        height: 300px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        color: white;
+    }
+
+    #banner ol {
+        height: 30px;
+        /* background: rgb(0, 0, 0, 0.6); */
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+
+    #banner ol li {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: white;
+        cursor: pointer;
+    }
+
+    #banner ol li.activy {
+        background: rgb(0, 0, 0, 0.9);
+    }
+    
+    #banner div {
+        width: 30px;
+        height: 30px;
+        line-height: 25px;
+        background: rgb(0, 0, 0);
+        font-size: 40px;
+        font-stretch: ultra-condensed;
+        display: inline-block;
+	    transform: scale(1,4);
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        top: 135px;
+        opacity: 0;
+    }
+    #banner:hover div {
+        opacity: 0.1;
+    }
+
+    #banner .left:hover,#banner .right:hover {
+        opacity: 0.4;
+    }
+
+    #banner .right {
+        right: 0;
+    }
+
+    table {
+        width: 566px;
+        border-top: 1px solid black;
+        border-left: 1px solid black;
+        display:block;
+        border-collapse: collapse;
+        /* margin: 50px auto; */
+    }
+
+
+    table th,table td {
+        padding: 20px;
+        border-bottom: 1px solid black;
+        border-right: 1px solid black;
+    }
+
+     table thead {
+        background-color: white;
+        position: absolute;
+    }
+
+    table tbody {
+        width: calc(100% + 15px);
+        height: 200px;
+        overflow: auto;
+        display: block;
+        overflow: overlay;
+
+    } 
+</style>
+<body>
+    <!-- <div id="banner">
+        <ul>
+            <li style="background: rgb(153, 0, 255);">1</li>
+            <li style="background: rgb(255, 136, 0);">2</li>
+            <li style="background: rgb(229, 255, 0);">3</li>
+            <li style="background: rgb(43, 255, 0);">4</li>
+            <li style="background: rgb(0, 225, 255);">5</li>
+        </ul>
+        
+        <ol></ol>
+
+        <div class="left">&lt;</div>
+        <div class="right">&gt;</div>
+    </div>
+    <script src="./banner.js"></script>
+    <script>
+        const banner = new Banner("#banner");
+    </script> -->
+
+        <table>
+            <thead>
+                <tr>
+                  <th width="100">#</th>
+                  <th width="100">First Name</th>
+                  <th width="100">Last Name</th>
+                  <th width="100">Username</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- <tr>
+                    <th width="100">#</th>
+                    <th width="100">First Name</th>
+                    <th width="100">Last Name</th>
+                    <th width="100">Username</th>
+                </tr> -->
+                <tr>
+                  <th width="100" scope="row">1</th>
+                  <td width="100">Mark</td>
+                  <td width="100">Otto</td>
+                  <td width="100">@mdo</td>
+                </tr>
+                <tr>
+                  <th width="100" scope="row">2</th>
+                  <td width="100">Jacob</td>
+                  <td width="100">Thornton</td>
+                  <td width="100">@fat</td>
+                </tr>
+                <tr>
+                  <th width="100" scope="row">3</th>
+                  <td width="100">Larry</td>
+                  <td width="100">the Bird</td>
+                  <td width="100">@twitter</td>
+                </tr>
+                <tr>
+                  <th width="100" scope="row">4</th>
+                  <td width="100">Larry</td>
+                  <td width="100">the Bird</td>
+                  <td width="100">@twitter</td>
+                </tr>
+                <tr>
+                  <th scope="row">5</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+                <tr>
+                  <th scope="row">6</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+                <tr>
+                  <th scope="row">7</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+                <tr>
+                  <th scope="row">8</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+                <tr>
+                  <th scope="row">9</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+                <tr>
+                  <th scope="row">10</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+                <tr>
+                  <th scope="row">11</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+                <tr>
+                  <th scope="row">12</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+                <tr>
+                  <th scope="row">13</th>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+        </table>
+</body>
+</html>
