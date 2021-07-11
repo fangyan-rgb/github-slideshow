@@ -68,7 +68,7 @@ class MyPromise {
             return value;
         }
         const realOnRejected = this.isFunction(onRejected) ? onRejected : (reason) => {
-            return reason;
+            throw reason;
         }
         // .then 的返回值是一个promise
         const promise2 = new MyPromise((resolve, reject) => {
@@ -103,8 +103,8 @@ class MyPromise {
                     break;
                 }
                 case PENNDING: {
-                    this.FULFILLED_CALLBACK_LIST.push(realOnFulfilled);
-                    this.REJECTED_CALLBACK_LIST.push(realOnRejected);
+                    this.FULFILLED_CALLBACK_LIST.push(fulfilledMicrotask);
+                    this.REJECTED_CALLBACK_LIST.push(rejectedMicrotask);
                     break;
                 }
             }
@@ -244,3 +244,10 @@ const test3 = new MyPromise((resolve, reject) => {
 });
 
 MyPromise.race([test1, test2, test3]).then(value => console.log(value));
+
+
+promise.then( res => {
+    
+}).catch( err => {
+
+})
