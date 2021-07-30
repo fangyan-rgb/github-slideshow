@@ -66,3 +66,78 @@ Array.copyWithin(target, start, end)： 用于从数组的指定位置拷贝元�
 	target：  必需。从该位置开始替换数据。
 	start：  可选。从该位置开始读取数据，默认为 0 。如果为负值，表示倒数。
 	end： 可选。到该位置前停止读取数据 (默认为 array.length)。如果为负值，表示倒数
+
+
+
+# 字符串常用方法
+
+str.charAt(index)： 返回 str 中 index 位置的字符，位置从0开始
+str.charCodeAt(unicode)： 返回 str 中 index 位置的 unicode 值
+String.fromCharcode(s1, s2, s3...)： 将一组 unicode 值转换为字符
+str.concat(s1, s2, s3...)： 将多个字符串拼接并返回，不改变原有字符串
+str.indexOf(str2, start)： 返回 str2 在 str 中第一次出现的索引，没有找到则返回 -1， start（可选）表示搜索的起始位置
+str.lastIndexOf(str2, start)： 返回 str2 在 str 中最后一次出现的索引，没有找到则返回 -1， start（可选）表示搜索的起始位置
+str.match(regexp)： 根据正则表达式 regexp 在 str 中搜索匹配项，没有匹配项则返回一个信息数组或 null
+str.replace(regexp/str2, str3):  将字符串 str 中匹配字符串 str2 或匹配正则表达式 regexp 的字符串替换为 str3
+str.search(regexp)： 返回匹配正则表达式 regexp 的字符串的起始位置，没找到则返回-1
+str.slice(start, end)： 提取字符串 str 中从 start 开始到 end（可选）位置的所有字符， end 不传则提取 start 后面的所有字符
+str.split(str2, limit)： 将字符串 str 按照字符 str2 分割成数组并返回，limit（整数，可选）为返回数组的最大长度
+str.substr(start, length)： 返回字符串中从索引 start 开始的 length（可选） 个字符，没有length则返回start之后的全部字符
+str.substring(start, end)： 提取字符串 str 中从 start 开始到 end（可选）位置的所有字符， end 不传则提取 start 后面的所有字符
+str.toLowerCase()： 将字符串 str 的所有字符全部转换为小写并返回
+str.toUpperCase()： 将字符串 str 的所有字符全部转换为大写并返回
+str.includes(str2)： 检查字符串 str 中是否出现字符串 str2 ，有则返回一个布尔值 true，否则返回 false
+str.endsWith(str2)： 检查字符串 str 是否以字符串 str2 结束，是则返回true，否则返回false
+str.repeat(num)： 构造拼接 num 次 str 并返回
+str.valueOf()： 返回一个String对象的原始值，等同于 String.prototype.toString()
+str.trim()： 删除字符串 str 两端的所有空白字符
+
+
+
+# 数字类型的常用方法
+
+Number.toLocaleString()：将一个 Number 对象转换为本地格式的字符串
+num.toString()： 将数字 num 转换为字符串
+Number(item)： 将变量转换为数字，使用于隐式转换
+parseInt(item)： 解析一个数字或字符串并返回一个整数，如果无法解析则返回 NaN
+parseFloat(item)： 解析一个数字或字符串并返回一个浮点数，如果无法解析则返回 NaN
+Math.min(n1, n2, n3...)： 返回一组数字中最小的数字，其中如果出现非数字则返回 NaN
+Math.max(n1, n2, n3...)： 返回一组数字中最大的数字，其中如果出现非数字则返回 NaN
+Math.abs(num): 返回数字 num 的绝对值，num 如果是非数字则返回 NaN
+Math.ceil(num)： 返回大于或等于数字 num 的最近整数，向上取整，num 如果是非数字则返回 NaN
+Math.foll(num)： 返回小于或等于数字 num 的最近整数，向下取整，num 如果是非数字则返回 NaN
+Number.isInteger(num)： 判断数字 num 是否为整数，是则返回 true，否则返回 false
+isNaN(item)： 检查 item 是否是非数字，返回一个布尔值
+Math.trunc(num)： 去除数字 num 的小数部分并返回整数部分，num 如果是非数字则返回 NaN
+Math.sign(num)： 判断数字 num 是否为正数、负数或+-0，分别返回 +1、-1或+-0，num 如果是非数字则返回 NaN
+num.toFixed(num2)： 将数字 num 保留 num2 位小数并返回
+
+
+
+# Object 常用方法
+Object.assign({}, o1, o2...)： 返回所有可枚举属性的值组成的对象并返回，若属性名冲突后面的会覆盖前面的
+Object.create(pro, settingAttr)： 创建一个新对象，从原型上继承pro，可以通过settingAttr指定对象属性，返回这个新对象
+Object.defineProperties(obj, setting)： 在对象 obj 上新增属性或修改属性，并返回该对象
+Object.defineProperty(obj, key, setting)： 修改对象 obj 中 key 属性的描述 setting （描述对象）
+Object.keys(obj)： 返回一个包含 obj 自身所有可枚举属性名的数组
+Object.values(obj)： 返回一个包含 obj 自身所有可枚举属性值的数组
+Object.getOwnPropertyNames(obj)： 返回包含obj所有属性名的数组
+Object.is(v1, v2)： 判断 v1 和 v2 的值是否相同，会判断类型（NaN 等于 NaN），返回一个布尔值
+Object.entries(obj)： 返回对象 obj 的可枚举属性的键值对数组，顺序与 for...in 遍历该对象时一样
+Object.freeze(obj)： 冻结对象 obj，在这之后 obj 对象的一切属性都不能再做更改，也不能新增和删除属性，也包括原型
+Object.getOwnPropertyDescriptor(obj, key)： 获取对象 obj 中 key 属性的描述
+obj.hasOwnProperty(key)： 判断对象 obj 本身是否存在 key 属性，不包含原型链，返回一个布尔值
+obj1.isPrototypeOf(obj2)： 判断对象 obj1 是否存在于对象 obj2 的原型链上，或者说对象 obj2 是否继承自对象 obj1，返回一个布尔值
+obj.propertyIsEnumerable(key)： 判断对象 obj 的 key 属性是否可枚举，返回一个布尔值
+obj.toString()： 返回一个表示 obj 对象的字符串，可以用来检测对象类型
+obj.watch(key, function(key, old, new))： 监听对象中 key属性的变化，并进行回调处理
+obj.unwatch(key, function(key, old, new))： 监听对象中 key属性的变化，并进行回调处理
+obj.valueOf()： 返回对象obj 的原始值
+Object.getPrototypeOf(obj)： 返回对象 obj 的原型	
+Object.setPrototypeOf(obj1, obj2)： 设置对象 obj1 的原型为 obj2
+
+
+对象的 __proto__ 指向的是创建它的函数的 prototype
+对象的原型链是沿着__proto__这条线走的，最后指向 Object.prototype
+在函数中this到底取何值，是在函数真正被调用执行的时候确定的，函数定义的时候确定不了
+javascript没有块级作用域，只有全局作用域和函数作用域
