@@ -1,0 +1,1 @@
+测试 fs 模块的 readFileSync 函数

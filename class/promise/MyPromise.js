@@ -225,29 +225,29 @@ class MyPromise {
 //     console.log('value', value);
 // });
 
-const test1 = new MyPromise((resolve, reject) => {
-    setTimeout(() => {
-        resolve('race111');
-    }, 1000);
-});
+// const test1 = new MyPromise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve('race111');
+//     }, 1000);
+// });
 
-const test2 = new MyPromise((resolve, reject) => {
-    setTimeout(() => {
-        resolve('race222');
-    }, 2000);
-});
+// const test2 = new MyPromise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve('race222');
+//     }, 2000);
+// });
 
-const test3 = new MyPromise((resolve, reject) => {
-    setTimeout(() => {
-        resolve('race333');
-    }, 3000);
-});
+// const test3 = new MyPromise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve('race333');
+//     }, 3000);
+// });
 
-MyPromise.race([test1, test2, test3]).then(value => console.log(value));
+// MyPromise.race([test1, test2, test3]).then(value => console.log(value));
 
 
-promise.then( res => {
+// promise.then( res => {
     
-}).catch( err => {
+// }).catch( err => {
 
-})
+// })
