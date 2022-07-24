@@ -15,7 +15,7 @@ Array.sort(arr || function)：传入类型是数组时，按照数组中元素�
 Array.concat(arr1, arr2, arr3...)：合并数组，不会改变原数组，按照顺序拼接
 Array.reverse()：数组按元素下标进行逆序， 改变原数组
 Array.join(str): 数组按照str分隔符连接成一个字符串，参数省略时分隔符为","  不改变原数组
-Array.forEach(function(currentValue[,index[,array]])[,thisArg]): 对数组元素执行一次回调函数，不改变原数组
+Array.forEach(function(currentValue[,index[,array]])[,thisArg]): 对数组元素执行一次回调函数，操作元素会改变原数组
 	currentValue 参数：必需参数，表示正在处理的数组元素（当前元素）；
 	index 参数：可选参数，表示正在处理的当前元素的索引；
 	array 参数：可选参数，表示方法正在操作的数组；

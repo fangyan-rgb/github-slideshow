@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1 class="ui-title"> 采购单ABD036981</h1>
+        <div class="ui-box" >
+            <table class="ui-basicInformation" border="1">
+                <tr>
+                    <td class="ui-td" colspan="12">付款申请书</td>
+                </tr>
+                <tr class="ui-tr">
+                    <td class="ui-td" colspan="2">付款公司主体</td>
+                    <td class="ui-td" colspan="2">test test test</td>
+                    <td class="ui-td">日期</td>
+                    <td class="ui-td">test test test</td>
+                    <td class="ui-td">合同号</td>
+                    <td class="ui-td">test test test</td>
+                </tr>
+                <tr class="ui-tr">
+                    <td class="ui-td" colspan="2">收款单位</td>
+                    <td class="ui-td" colspan="2">test test test</td>
+                    <td class="ui-td" rowspan="6" colspan="1">付款原因</td>
+                    <td class="ui-td" rowspan="6" colspan="4">
+                        <!--<el-input type="textarea" resize="none" :rows="14" v-model='applyPaymentContractForm.reason' placeholder="请输入付款原因"></el-input>-->
+                        <!--<input type="text" placeholder="请输入付款原因">-->
+                        <textarea name="content" rows="14" cols="80" placeholder="请输入付款原因"></textarea>
+                    </td>
+                </tr>
+                <tr class="ui-tr">
+                    <td class="ui-td" colspan="2">账号</td>
+                    <td class="ui-td" colspan="2">test test test</td>
+                </tr>
+                <tr class="ui-tr">
+                    <td class="ui-td" colspan="2">开户行</td>
+                    <td class="ui-td" colspan="2">test test test</td>
+                </tr>
+                <tr class="ui-tr">
+                    <td class="ui-td" colspan="2">金额</td>
+                    <td class="ui-td" colspan="2">test test test</td>
+                </tr>
+                <tr class="ui-tr">
+                    <td class="ui-td" colspan="2">总金额</td>
+                    <td class="ui-td" colspan="2">test test test</td>
+                </tr>
+                <tr class="ui-tr">
+                    <td class="ui-td" colspan="2">审批</td>
+                    <td class="ui-td" colspan="2">test test test</td>
+                </tr>
+                <tr class="ui-tr">
+                    <td class="ui-td">财务总监</td>
+                    <td class="ui-td"></td>
+                    <td class="ui-td">记账</td>
+                    <td class="ui-td"></td>
+                    <td class="ui-td">采购经理</td>
+                    <td class="ui-td"></td>
+                    <td class="ui-td">制单</td>
+                    <td class="ui-td"></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <style>
+        .ui-title {
+            font-size: 28px;
+            padding-top: 10px;
+            display: flex;
+            justify-content: center;
+        }
+        .ui-box {
+            display: flex;
+            justify-content: center;
+            padding: 10px 30px 20px 30px;
+            width: 1000px;
+            margin-left: 250px;
+        }
+        .ui-basicInformation {
+            text-align: center;
+            font-size: 14px;
+            border-spacing: 1px;
+            border-collapse: collapse;
+            margin-top:-20px;
+        }
+        .ui-td {
+            width: 160px;
+            height: 45px;
+            background-color: #f9f9f9;
+        }
+        .ui-td:nth-child(2n) {
+            width: 220px;
+            background-color: white;
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,378 @@
+@import "./theme";
+
+// 背景色
+@base-main-bg: #fafafa;
+
+// 禁用按钮
+@base-disabled-btn: #bbbbbb;
+@base-disabled-btn-bdr: #ebeef5;
+
+// 一级字体大小
+@base-txt-one: 14px;
+
+// 二级字体大小
+@base-txt-two: 16px;
+
+// 三级字体大小
+@base-txt-three: 18px;
+
+// 一级字体颜色
+@base-txtColor-one: #676767;
+
+// 二级字体颜色
+@base-txtColor-tow: #333333;
+
+// 三级字体颜色
+@base-txtColor-three: #666666;
+
+//默认字体颜色
+@base-default-color: #c3d0d7;
+
+@base-btn-txt-color: #ffffff;
+
+// 操作区域颜色
+@base-main-areaBg: #ffffff;
+
+// 边框颜色
+@base-bdr-color: #e6e6e6;
+
+// 表格总数行
+@base-table-sumBg: #ffffff;
+//表头背景色
+@base-table-bgColor: #f5f5f5;
+//表头框线颜色
+@base-table-bdColor: #eae7e7;
+
+// 错误字体颜色
+@base-error-color: #FF2A18;
+
+@base-link-color: #4965FF;
+
+// 侧边栏激活颜色
+@base-side-active: #feebd8;
+
+// 提示内容
+@base-tip-color: #ff6666;
+
+// 表格分割背景射
+@base-table-separate-color: #F3F6FA;
+
+// 表格分割背景射
+@base-title-button-default-color: #3388ff;
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+    cursor: pointer;
+    color: inherit;
+    text-decoration: none;
+}
+
+.clearFix::after {
+    content: " ";
+    display: block;
+    clear: both;
+}
+
+.f-l {
+    float: left;
+}
+
+.f-r {
+    float: right;
+}
+
+.clearFix {
+    zoom: 1;
+}
+
+html,body {
+    width: 100%;
+    height: 100%;
+    background-color: @base-main-bg;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: "Microsoft YaHei","微软雅黑";
+}
+
+//下拉框、输入框边框样式
+.el-form-item.is-success .el-input__inner,  .el-form-item.is-success .el-textarea__inner  {
+    border-color: #c0c4cc;
+}
+//下拉框、输入框激活边框样式
+.el-form-item.is-success .el-input__inner:focus,.el-form-item.is-success .el-textarea__inner:focus {
+    border-color: #409EFF;
+}
+
+//状态字体颜色
+.orangeColor {
+  background: #fd9727;
+}
+.blueColor {
+  background: #3388ff;
+}
+.greenColor {
+  background: #8dc444;
+}
+.redColor {
+  background: #ff3333;
+}
+.grayColor {
+  background: #cccccc;
+}
+
+
+
+// 多选框TAG字段
+.el-tag--info {
+    max-width: 100px;
+    width: auto!important;
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    position: relative;
+    padding-right: 15px;
+    .el-tag__close {
+        position: absolute;
+        right: 0!important;
+        top: 3px!important;
+    }
+}
+.is-required {
+    .el-form-item__label {
+        &::before {
+            content: '*';
+            color: #f56c6c;
+            margin-right: 4px;
+            position: absolute;
+            margin-left: -8px;
+        }
+
+    }
+}
+
+.ui-hint-color {
+    color: #ff6666;
+    font-size: 16px;
+}
+
+//icon开启关闭按钮
+.icon_switch {
+    font-size: 26px!important;
+}
+
+.icon_switch_off {
+    color: #999999;
+}
+
+//人事考勤部门查询搜索框样式
+.ui-search-input {
+    .el-input-group>.el-input__inner {
+        vertical-align: baseline;
+        display: inherit;
+    }
+}
+
+.ui-date {
+    .el-date-editor.el-input__inner {
+        width: 250px!important;
+    }
+}
+
+//销售员设置表单样式
+.ui-main-form_box {
+    .el-form-item__content {
+        width: 400px;
+    }
+    .el-form-item {
+
+        .el-form-item__label {
+            //color: #333333;
+        }
+        .el-input, .el-select {
+            width: 240px;
+        }
+
+    }
+
+}
+
+//个人经历编辑样式
+
+.ui-add_container {
+
+  .el-form {
+    overflow: hidden;
+
+    .ui-add_item {
+      .el-form-item {
+        float: left;
+        margin-right: 75px;
+        .el-form-item__content {
+          margin-left: 100px;
+        }
+        .el-form-item__label {
+          //color: #333333;
+          width: 100px;
+        }
+        .el-input, .el-select {
+          width: 240px;
+        }
+      }
+    }
+  }
+
+
+  .el-collapse-item__content {
+    padding-bottom: 0;
+  }
+
+  .el-collapse-item__wrap {
+    overflow: inherit;
+  }
+
+  .el-collapse-item__header {
+    text-align: left;
+    border-bottom: 1px solid #e6e6e7;
+  }
+
+  .el-collapse-item__header.is-active {
+    border-bottom-color: #e6e6e7;
+  }
+}
+
+// .ui-container {
+//     .el-tag--info {
+//         max-width: 100px;
+//     }
+// }
+
+
+.ui-preview_copy {
+    .el-dialog__body {
+        padding: 20px;
+    }
+}
+
+
+//加班设置删减按钮
+.ui-container {
+    .ui-operation_btn-form {
+        right: -20px!important;
+        bottom: 12px;
+    }
+}
+
+
+//穿梭组件
+.ui-grounp-container {
+    .el-form {
+        margin-top: 20px;
+        .el-form-item {
+            float: left;
+        }
+        .el-form-item__content {
+            float: left;
+            margin-right: 100px;
+        }
+        .el-form-item__label {
+            width: 100px;
+        }
+    }
+}
+
+// // 演示临时样式
+// .el-dialog {
+//     width: 100%!important;
+// }
+
+//备注提示悬浮框
+.el-tooltip__popper.is-light {
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .12), 0 0 6px rgba(0, 0, 0, .04);
+    max-width: 450px;
+    word-break:break-all;
+    word-wrap:break-word;
+    font-size: 14px;
+    line-height: 1.5 ;
+    .popper__arrow {
+        border-width: 0;
+    }
+}
+
+// textarea 内容字体
+textarea{
+    font-family: "Microsoft YaHei","微软雅黑";
+}
+
+// 超过一行出现省略号
+.ellipsis1{
+    display: block;
+    max-height: 14px;
+    line-height: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+// 超过两行出现省略号
+.ellipsis2{
+    max-height: 28px;
+    line-height: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+// 超过四行出现省略号
+.ellipsis4{
+    max-height: 56px;
+    line-height: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-clamp: 4;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+// 表格基本样式
+.commontablestyle{
+    width: 100%;
+    border-right: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    font-size: 12px;
+
+    td {
+        border-top: 1px solid #e6e6e6;
+        border-left: 1px solid #e6e6e6;
+        padding: 5px 10px;
+    }
+}
+
+// 快捷搜索样式
+.quickparamswrap{
+    float: left;
+    position: relative;
+    &:after{
+        content: " ";
+        clear: both;
+    }
+}
+
+// show-word-limit 属性的 input 增加右内边距
+.showwordlimitipt{
+    .el-input__inner{
+        padding-right: 61px;
+    }
+}

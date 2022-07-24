@@ -1,0 +1,388 @@
+
+//@import (reference) './index';
+.initStyle(
+    /*----------------------------------------------------主题色------------------------------------------------------*/
+    @para-main_color: #5196fe,  //#75B1FF
+    /*----------------------------------------------------菜单栏------------------------------------------------------*/
+    //背景色
+    @para-menu_bgColor: #2b323d,  //#283036,
+    //菜单展开背景色
+    @para-menu-collapse_bgColor: #1f262f,  //#161a1e,
+    //字体颜色
+    @para-menu-txt_color: #a2aab8,  //#98a2ac,
+    //圆点颜色
+    @para-menu-dash_color: #7284a8,  //#7284a8
+    //线条颜色
+    @para-menu-line_color: #283c50,  //#303c49,
+    /*----------------------------------------------------列表区域------------------------------------------------------*/
+    //列表鼠标hover
+    @para-table-hover_bgColor: #ecf6fe,  //#f3faff,
+    //边框线颜色
+    @para-table-hover_borderColor: #80bcf3,  //#b0cef9,
+    /*----------------------------------------------------按钮颜色------------------------------------------------------*/
+    @para-btn_color: #5196fe,  //#75B1FF, #8dc1fe
+    @para-btn_hoverColor: #74abfe,
+    //列表点击后
+    @para-table-click_bgColor: #e8f5ff) {
+
+    // 导航栏高度
+    @base-nav-height: 50px;
+    //弹框表头背景色
+    @base-dialog-bgColor: #f3f3f3;
+
+    /** 多系统公用样式 ---------------------------------====== Start ======--------------------------------**/
+
+    //菜单栏样式
+    .ui-nav {
+        background: @para-menu_bgColor;
+        &::-webkit-scrollbar{width:0}
+        .ui-nav-bar {
+            background: @para-menu_bgColor;
+        }
+        .ui-system-info {
+            border-bottom: 1px @para-menu-line_color solid;
+            border-top: 1px @para-menu-line_color solid;
+            background: @para-menu_bgColor;
+            i {
+                color: @para-main_color;
+            }
+        }
+        /*菜单栏*/
+        .el-menu {
+            background: @para-menu_bgColor;
+            .el-menu--inline {
+                background: @para-menu-collapse_bgColor;
+            }
+            .default {
+                color: @para-menu-txt_color;
+            }
+            .active {
+                color: @para-main_color;
+            }
+            //一级菜单
+            .el-submenu__title {
+                color: @para-menu-txt_color;
+                border-bottom: 1px @para-menu-line_color solid;
+            }
+            //二级菜单
+            .el-submenu .el-menu-item {
+                color: #cacdcf;
+            }
+            .el-submenu .el-menu-item:hover {
+                color: #ffffff;
+            }
+            .el-submenu .el-menu-item.is-active {
+                color: @para-main_color;
+            }
+            .el-submenu__title:hover, el-submenu__title:focus {
+                background: @para-menu_bgColor;
+            }
+            //圆点
+            .menu-item-dot {
+                border: 0.5px dashed @para-menu-dash_color;
+                .normal-dot {
+                    background-color: @para-menu-dash_color;
+                }
+                .active-dot {
+                    background-color: @para-main_color;
+                }
+            }
+        }
+    }
+    //内容模块
+    .ui-content {
+        //路由模块
+        .ui-multiple_tab-item {
+            color: @para-main_color;
+            span.ui-link {
+                color: @para-main_color;
+            }
+            span.ui-link + i {
+                background: @para-main_color;
+            }
+        }
+        .ui-main-module {
+            li.ui-search-layout_inp {
+                .el-checkbox__label {
+                    font-size: 12px;
+                }
+            }
+            .el-input--small {
+                font-size: 12px !important;
+            }
+            .el-textarea{
+                font-size: 12px !important;
+            }
+            .ui-search-area {
+                background: @base-main-areaBg;
+                border: 1px solid #e6e6e6;
+                border-top: 0 none;
+            }
+            .ui-search_input{
+                .el-date-editor .el-range-input{
+                    font-size: 12px;
+                }
+            }
+            .el-date-editor .el-range-input{
+                font-size: 12px !important;
+            }
+            //查询区域按钮
+            .ui-main-search-btn,.ui-filter-btn {
+                .el-button {
+                    font-family: "Microsoft YaHei","微软雅黑";
+                    border-radius: 15px;
+                }
+                .el-button--primary {
+                    color: #ffffff;
+                    background: @para-btn_color;
+                    border-color: @para-btn_color;
+                }
+                .el-button--default:focus, .el-button--default:hover {
+                    background-color: #FFFFFF;
+                    color: #333333;
+                    border-color: @para-btn_color;
+                }
+                .el-button--primary:hover {
+                    background: @para-btn_hoverColor;
+                    border-color: @para-btn_hoverColor;
+                }
+                .el-button--primary:focus {
+                    background: @para-btn_color;
+                }
+                .el-button--small {
+                    padding: 9px;
+                }
+                i {
+                    font-size: 12px;
+                    margin-right: 4px!important;
+                }
+            }
+            //筛选按钮
+            .ui-filter-btn {
+                text-align: left;
+                margin: 5px 0 0 100px;
+                box-sizing: border-box;
+                .el-button--small {
+                    padding: 9px;
+                    i {
+                        font-size: 12px!important;
+                        margin-right: 5px!important;
+                    }
+                }
+                .el-button--text {
+                    margin-left: 0!important;
+                }
+            }
+            //操作按钮
+            .ui-fn-module {
+                margin:0;
+                background: @base-table-separate-color;
+                .el-button--primary {
+                    color: @para-btn_color;
+                    border-color: @para-btn_color;
+                    background: none;
+                    &:hover, &:active {
+                        background: @para-btn_color;
+                        color: #ffffff;
+                    }
+                }
+                .el-button--text{
+                    font-family: "Microsoft YaHei","微软雅黑";
+                    color: #333;
+                    font-size: 12px;
+                    font-weight: 600;
+                    &:hover {
+                        color: #409EFF;
+
+                    }
+                }
+                [class ^= 'icon-'], [class *= ' icon-'] {
+                    font-size: 12px;
+                    margin-right: 3px;
+                }
+                .ui-table-content {
+                    float: right;
+                    padding: 9px;
+                    padding-right: 20px;
+                    line-height: 12px;
+                    .ui-table-summry {
+                        margin: 0 6px;
+                        color: #333;
+                        font-size: 12px;
+                      }
+                      .ui-sum {
+                        color: #fda618;
+                      }
+                }
+                .ui-top_i{
+                    top: -1px;
+                }
+            }
+            //列表区域
+            .ui-main-module-table {
+                .el-table tr td {
+                    border-top: 1px solid transparent;
+                }
+                .el-table__body tr.hover-row> td {
+                    background: @para-table-hover_bgColor;
+                    border-top: 1px solid @para-table-hover_borderColor;
+                    border-bottom: 1px solid @para-table-hover_borderColor!important;;
+                }
+                .el-table--enable-row-hover .el-table__body tr:hover td {
+                    .el-checkbox__input {
+                        position: relative;
+                        left: -2px;
+                    }
+                }
+                .current-row td {
+                    background-color: @para-table-click_bgColor;
+                }
+                .el-table--enable-row-hover .el-table__body tr:hover>td:first-child {
+                    border-left: 2px @para-main_color solid!important;
+                }
+                .el-table__body tr.hover-row> td:first-child {
+                    border-left: 2px @para-main_color solid!important;
+                }
+                .el-table tr:last-child td {
+                    border-bottom: 1px solid #efefef;
+                }
+                //数据栏切换样式
+                .ui-main-tab-box span:hover {
+                    color: @para-main_color;
+                }
+                .ui-active {
+                    color: @para-main_color;
+                    border-bottom: 2px @para-main_color solid;
+                }
+                //状态圆圈
+                .ui-state_circle {
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                    display: inline-block;
+                    position: relative;
+                    top: -2px;
+                    left: 0;
+                }
+                /deep/.el-table__empty-text{
+                    transform: none;
+                }
+            }
+            .el-table .cell .el-button--text {
+                font-size: 12px;
+                padding: 0;
+            }
+            .ui-btn-chose{
+                text-align: left;
+                margin:10px 110px;
+                margin-bottom: 0;
+                margin-top: 5px;
+                .btn-style{
+                    margin-left:0px!important;
+                }
+            }
+            /** 公用样式微调 ---------------------------------====== Start ======--------------------------------**/
+            // 列表超出
+            .ui-content-overflow {
+                .ui-tooltip {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+            }
+            .el-table-column--selection .cell {
+               padding-left: 0px;
+            }
+        }
+    }
+    //表头切换样式
+    //.el-tabs--card>.el-tabs__header .el-tabs__item:hover {
+    //    color: @para-main_color;
+    //}
+    .el-tabs--card>.el-tabs__header .el-tabs__item.is-active {
+        border-bottom: 1px @para-main_color solid!important;
+        background: @para-main_color;
+        height: 30px;
+        line-height: 29px;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .ui-main-module-top {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        padding: 10px 30px;
+        background: #ffffff ;
+    }
+    .ui-main-module-top ul::after {
+        display: block;
+        content: '';
+        clear: both;
+    }
+    .ui-main-module-top li{
+        float: left;
+        margin-right: 20px;
+    }
+    // 点击列颜色
+    .ui-link{
+        cursor: pointer;
+        color: @base-link-color;
+    }
+    /** 多系统公用样式 ---------------------------------====== End ======--------------------------------**/
+    // 查询条件日期范围的输入框的样式
+    .el-range-editor .el-range-input {
+        font-size: 12px !important;
+    }
+    .el-range-editor .el-range-separator{
+        font-size: 12px !important;
+    }
+    .ui-main-module .ui-main-module-search li {
+        width: 18%;
+        margin-right: 3px;
+    }
+}
+
+// 蒙层样式
+.el-loading-mask {
+    //background-color: rgba(0,0,0,.6);
+}
+.ui-main {
+    background: #f3f6fa!important;
+}
+
+.el-cascader-menu {
+    &::-webkit-scrollbar{width:0}
+}
+.el-cascader-menu__item {
+    font-size: 12px !important;
+}
+.el-radio{
+    font-size: 12px !important;
+    .el-radio__label{
+        font-size: 12px !important;
+    }
+}
+.el-checkbox{
+    font-size: 12px !important;
+    .el-checkbox__label{
+        font-size: 12px !important;
+    }
+}
+
+.el-table__empty-text{
+    transform: none !important;
+}
+.el-time-panel {
+    left: -30px!important;
+}
+
+.ui-main-module .ui-main-module-search .el-select div {
+    height: 32px;
+    input {
+        line-height: 32px;
+        height: 32px!important;
+    }
+}
+
+.el-scrollbar__view .el-select-dropdown__item{
+    font-size: 12px;
+}
