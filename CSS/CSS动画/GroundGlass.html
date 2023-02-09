@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GroundGlass</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: #333;
+            background-image: url('https://cn.bing.com/th?id=OHR.PFNPAZ_ZH-CN7929165864_1920x1080.jpg&rf=LaDigue_1920x1080.jpg');
+        }
+        .active {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            height: 500px;
+            backdrop-filter: blur(10px);
+        }
+
+        @keyframes rotation {
+            0% {--rotation: 0;}
+            100% {--rotation: 100%;}
+        }
+
+        .box {
+            width: 350px;
+            height: 350px;
+            background: #333;
+            padding: 10px;
+            margin: 50px;
+            display: inline-block;
+        }
+
+        .parent {
+            width: 330px;
+            height: 330px;
+            /* background: rosybrown; */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-content: space-between;
+        }
+
+        .child, .child1 {
+            width: 100px;
+            height: 100px;
+            background: #409EFF;
+            display: inline-block;
+        }
+
+        .child:nth-child(5), .child1 {
+            background: #67C23A;
+            margin-top: -50px;
+            margin-right: -50px;
+            margin-bottom: -50px;
+            margin-left: -50px;
+        }
+
+        .parent2 {
+            width: 100px;
+            height: 100%;
+            background: floralwhite;
+            margin-left: -50px;
+            display: inline-block;
+        }
+
+        /* .parent::before, .parent::after {
+            display: table;
+            content: "";
+        } */
+    </style>
+</head>
+<body>
+    <div class="active"></div>
+
+    <div class="box">
+        <div class="parent">
+
+            <div>
+                <div class="child"></div>
+                <div class="child"></div>
+                <div class="child"></div>
+            </div>
+
+            <div>
+                <div class="child"></div>
+                <div class="child1"></div>
+                <div class="child"></div>
+            </div>
+            <div>
+                <div class="child"></div>
+                <div class="child"></div>
+                <div class="child"></div>
+            </div>
+
+            <!-- <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div>
+            <div class="child"></div> -->
+        </div>
+    </div>
+</body>
+</html>

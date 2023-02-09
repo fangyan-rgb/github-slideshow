@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loading1</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: #333;
+        }
+
+        .loading {
+            width: 100px;
+            height: 100px;
+            background: conic-gradient(transparent 0, rgba(160, 207, 255));
+            border-radius: 50%;
+            margin: 200px auto;
+            -webkit-mask-image: radial-gradient(closest-side, transparent 75%, black 76%);
+            mask-image: radial-gradient(closest-side, transparent 75%, black 76%);
+            animation: rotation 1s linear infinite;
+            position: relative;
+        }
+
+        @keyframes rotation {
+            0% {transform: rotateZ(0deg);}
+            100% {transform: rotateZ(360deg);}
+        }
+
+
+        .neon {
+            margin-top: 200px;
+            text-align: center;
+            font-size: 56px;
+            color: #e36262;
+            animation: neon 0.1s linear infinite;
+        }
+
+        @keyframes neon {
+            0% {text-shadow: 0 0 6px #e3626290, 0 0 12px #e3626260, 0 0 18px #e3626230;}
+            100% {text-shadow: 0 0 6px #e3626280, 0 0 13px #e3626250, 0 0 20px #e3626220;}
+        }
+
+    </style>
+</head>
+<body>
+    <div class="loading"></div>
+
+    <div class="neon">霓虹灯</div>
+</body>
+</html>
